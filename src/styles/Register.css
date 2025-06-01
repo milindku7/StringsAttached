@@ -1,0 +1,91 @@
+/* Remove any App-header gradient on this page */
+body.register-page .App-header {
+    background: none !important;
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+
+.next-button{
+    width: 260px;
+    height: 45px;
+    background-color: #FF7F50;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+    font-Family: 'JetBrains Mono';
+}
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    color: black; /* Ensuring the title is black */
+    margin-top: 10px;
+}
+.register-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.register-group input {
+    width: 200px;
+    height: 100%;
+    background-color: #080707;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.register-container {
+    background: #800080;
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.register-wrapper {
+    position: relative; /* Needed for absolute child positioning */
+    max-width: 400px; /* Match register-container width */
+    margin: 0 auto; /* Center the wrapper */
+}
+
+.registration-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .registration-logo {
+    width: 20%; /* Base size */
+    height: 20%;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 430px) { /* iPhone 14 Pro Max width */
+    .registration-logo {
+      width: 50px; /* Slightly smaller on mobile */
+    }
+    .register-container{
+      border-radius: 10px;
+      padding: 1.5rem;
+    }
+    .register-group input {
+      width: 100%;
+      font-size: 20px;
+    }
+  
+    .next-button {
+      width: 100%;
+    }
+  
+    .title {
+      font-size: 28px;
+    }
+  }

@@ -1,0 +1,20 @@
+Team Claem - Team Contract
+
+Team name: Team Claem
+
+Describe your team's alternate dispute resolution approach. Your team will be required to use these when you just cannot agree on a decision. Your mechanism must be fast, simple, and as silly/fun as possible to limit the bad feelings that can result. Voting is NOT allowed for this.
+
+We are planning to throw a ball in the middle and whoever catches it first gets it their way. We also could do rock-paper-scissors if we do not have access to a ball.
+
+Write 1 or 2 paragraphs describing the completed version of your project. (Developing estimates is very, very hard and takes years to do well. These descriptions are only to help your project manager understand your goals and prioritize the work to be done).
+
+We want to create a platform where musicians and music enthusiasts are able to find friends/relationships with a similar passion to their own and connect through shared interests in music. Users will be able to create “dating” profiles and can spotlight any instruments they may play, artists, or songs they enjoy. Users will be able to search others based on preferences, location, and other common features. A unique feature will be the review system, where users can leave feedback on their dates, but reviews will only be visible after both parties have submitted theirs, ensuring that the review received will not affect one’s review. Additionally, the integrated music section will allow users to showcase their musical tastes, list instruments they play, and share their favorite song of the week, showcasing one’s passion for music more. This will allow our users to create connections based on their music taste.
+
+Write 1 or 2 paragraphs describing a typical user of your project and how they would use it.
+
+The typical user can be anyone 18 and above searching for a life partner, a friend, or just a fun night out. They will have the ability to find someone based on age, distance, and even music preferences. Our app is meant to be inclusive of all people regardless of gender, sexual orientation, or background. The app will function like the typical dating site where the user will swipe right for someone they are interested in and left otherwise. They will also be able to send messages to one another if they are matched. The users would also have the ability to link their favorite song on their profiles to show everyone who swipes onto their profile.
+
+Find at least two other applications that do something similar to what you are doing (they don't have to be exactly the same, of course, but if you're creating a social media site to share recipes, for example, there are many recipe applications). How will you be different from those applications? What do you like about them? What do you not like about them?
+
+Two other applications that can have similar functions to our application could be Bumble and Hinge. A way to differentiate our application from the other ones comes in both our focus on music as a main connector between users as well as the ability to review other users. Something that we like about other apps is the option to leave somebody a message when you like their profile as a way of showing personality or giving them additional reasons to match with you. We don’t like the fact that it’s not possible to review other users, which can lead to people not receiving feedback on themselves. Additionally, we do not enjoy how there is a lack of focus on what makes people unique on these platforms and what kind of hobbies they enjoy. Music is known to connect those from different backgrounds, which we hope to integrate in our platform. 
+

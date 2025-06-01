@@ -1,0 +1,87 @@
+.account-activity-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: black; /* Ensuring the title is black */
+    margin-bottom: 50px;
+
+}
+.success-message{
+    font-size: 20px;
+    font-weight: medium;
+    color: #42C640;
+    margin-bottom: 20px;
+}
+.add-song-button{
+    width: 260px;
+    height: 45px;
+    background-color: #ffcc33;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+.add-instrument-button{
+    width: 260px;
+    height: 45px;
+    background-color: #ffcc33;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+.add-song-button{
+    margin-top: 15px;
+}
+.submit-button {
+    background-color: #FF7F50;
+    color: black;
+    margin-top: 10px;
+    width: 260px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+
+}
+
+.submit-button:hover {
+    background-color: #e6b800;
+}
+.url-input-container {
+    display: flex;            /* Enable flexbox */
+    flex-direction: column;   /* Stack input and button vertically */
+    align-items: center;      /* Center both horizontally */
+    justify-content: center;  /* Center vertically (if needed) */
+    width: 100%;              /* Take up full width of its parent */
+    margin-top: 20px;         /* Add space from any element above */
+  }
+  
+.url-input{
+    width: 260px;              /* Same width as the submit button */
+    height: 45px;              /* Same height as the submit button */
+    border: none;              /* Remove default border */
+    border-radius: 10px;       /* Same border radius as the button */
+    font-size: 18px;           /* Same font size */
+    font-weight: bold;         /* Same font weight */
+    color: black;              /* Same font color */
+    padding-left: 10px;        /* Optional: add padding to make text not touch the left edge */
+  }
+  .delete-button {
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+}

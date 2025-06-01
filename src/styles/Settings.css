@@ -1,0 +1,497 @@
+.settings-dark-container {
+    display: flex;
+    color: white;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .settings-sidebar {
+    width: 240px;
+    border-right: 1px solid #333;
+    padding: 30px 20px;
+    background-color: #f8f2e6;
+  }
+  
+  .settings-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .settings-sidebar li {
+    padding: 12px 0;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .settings-sidebar li.active {
+    font-weight: 700;
+    color: white;
+  }
+  
+  .settings-main-content {
+    flex: 1;
+    padding: 40px;
+    color: black;
+    background-color: #f8f2e6; 
+  }
+  
+  .profile-banner {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #444;
+  }
+  
+  .username-display {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: lowercase;
+  }
+  
+  .change-photo-btn {
+    margin-top: 5px;
+    background: #1d4ed8;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .input-block {
+    margin-bottom: 20px;
+  }
+  
+  .input-block label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+    color: #aaa;
+  }
+  
+  .input-block input {
+    width: 100%;
+    padding: 10px;
+    background: #121212;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 6px;
+  }
+  
+  .save-btn {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+
+  .settings-sidebar li {
+    cursor: pointer;
+    padding: 12px 16px; /* match the active state padding */
+    color: black;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  
+  .settings-sidebar li.active {
+    font-weight: bold;
+    color: black;
+    background-color: #d3d3d3; /* light gray background */
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  
+  
+  .settings-container {
+    text-align: center;
+    padding: 60px 20px 40px; /* Added padding at the bottom */
+    color: black;
+    background-color: #f8f2e6;
+    height: 100vh; /* Ensure the container takes the full viewport height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+.settings-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.settings-container p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.settings-container input {
+    color: black;
+    font-size: 14px;
+}
+
+
+/* Profile Picture Section */
+.profile-picture-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.profile-picture-upload input[type="file"] {
+    margin-bottom: 8px;
+}
+
+.profile-picture-upload button {
+    background-color: #ffcc33;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.profile-picture-upload button:hover {
+    background-color: #e6b800;
+}
+
+.checkbox-container {
+    background-color: #d1d1d1;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+/* Update Fields Section */
+.update-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.update-fields input {
+    width: 100%;
+    max-width: 280px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #d1d1d1;
+    margin: 0 auto;
+}
+
+.update-fields button {
+    background-color: #ffcc33;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px auto;
+    font-size: 14px;
+}
+
+.update-fields button:hover {
+    background-color: #e6b800;
+}
+
+  
+  
+
+
+.post-creation {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.post-creation textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #d1d1d1;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.post-creation button {
+    background-color: #ffcc33;
+    color: black;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.post-creation button:hover {
+    background-color: #e6b800;
+}
+
+.user-posts {
+    margin-top: 15px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.post-container {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.post-container img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.post-container button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.post-container button:hover {
+    background-color: darkred;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    overflow-y: auto;
+    padding: 2rem;
+  }
+  
+  .modal-content {
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    min-height: 60vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  
+  
+  .modal-update-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1rem;
+  }
+  
+  .modal-update-fields input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #d1d1d1;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .modal-update-fields button {
+    background-color: #ffcc33;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .modal-update-fields button:hover {
+    background-color: #e6b800;
+  }
+  
+  .modal-close-button {
+    background-color: #888;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  
+  .modal-close-button:hover {
+    background-color: #666;
+  }
+  
+  .modal-close-x {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: #666;
+    cursor: pointer;
+    z-index: 1001;
+    transition: color 0.2s ease;
+  }
+  
+  .modal-close-x:hover {
+    color: #000;
+  }
+  
+
+  .user-info {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+    font-size: 14px;
+  }
+  
+  .profile-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-item:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .value {
+    color: #222;
+    font-weight: 500;
+  }
+  
+@media (max-width: 768px) {
+    .settings-dark-container {
+      flex-direction: column;
+      padding: 10px;
+    }
+  
+    .settings-sidebar {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 10px;
+      border-right: none;
+      border-bottom: 1px solid #ccc;
+    }
+  
+    .settings-main-content {
+      padding: 20px 10px;
+    }
+  
+    .user-info {
+      width: 100%;
+      max-width: 100%;
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .profile-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .profile-item .label,
+    .profile-item .value {
+      width: 100%;
+      text-align: left;
+    }
+  
+    iframe {
+      width: 100% !important;
+      height: auto !important;
+      aspect-ratio: 16 / 9;
+    }
+  
+    .modal-content {
+      width: 95%;
+      padding: 1rem;
+    }
+  
+    .post-container button {
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-top: 8px;
+    }
+  }
+  

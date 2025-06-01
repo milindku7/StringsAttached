@@ -1,0 +1,143 @@
+/* Profile Page Container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f2e6;
+}
+
+/* Profile Box */
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Profile Picture Upload */
+.profile-picture-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #eaeaea;
+    border: 2px dashed #aaa;
+    cursor: pointer;
+    text-align: center;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Pencil Icon */
+.edit-icon {
+    position: absolute;
+    bottom: -23px;
+    right: -23px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Form */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.profile-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #d1d1d1;
+}
+
+/* Submit Button */
+/* Standardized Button Styling */
+.button {
+    width: 100%;  /* Make it the same width as input fields */
+    max-width: 300px; /* Ensure it matches the input field size */
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Submit Button */
+.submit-button {
+    background-color: #ffcc33;
+    color: black;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #e6b800;
+}
+
+/* Delete My Account Button */
+.delete-button {
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.delete-popup-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-popup {
+    background: orange;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+

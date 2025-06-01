@@ -1,0 +1,114 @@
+.circle-wrapper {
+    position: absolute;
+    width: 260px; /* Slightly smaller to match shadow */
+    height: 260px;
+}
+
+.circle {
+    position: absolute;
+    width: 220px;  /* Keeping original size */
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left,
+    rgba(0, 200, 150, 0.8) 10%,  /* Greenish start */
+    rgba(74, 0, 224, 0.8) 40%,   /* Deep Blue */
+    rgba(128, 0, 128, 0.9) 70%,  /* Purple */
+    rgba(192, 0, 192, 0.6) 100%  /* Pinkish-Purple outer */
+    );
+    box-shadow: inset -15px -15px 35px rgba(0, 0, 0, 0.5), /* Adjusted shadows */
+    5px 5px 25px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+
+    /* Centering inside .circle-overlay */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-overlay {
+    position: absolute;
+    width: 240px; /* Made smaller */
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left,
+    rgba(0, 200, 150, 0.3) 10%,
+    rgba(74, 0, 224, 0.3) 40%,
+    rgba(128, 0, 128, 0.4) 70%,
+    rgba(192, 0, 192, 0.2) 100%
+    );
+    box-shadow: inset -15px -15px 35px rgba(0, 0, 0, 0.3), /* Lighter shadow */
+    5px 5px 25px rgba(0, 0, 0, 0.2);
+
+    /* Centering the shadow */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1; /* Slightly darker than before */
+}
+
+/* Orange Circle Styles */
+.orange-circle {
+    position: absolute;
+    width: 220px;  /* Keeping original size */
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left,
+    rgba(255, 140, 0, 0.8) 10%,  /* Deep Orange */
+    rgba(255, 69, 0, 0.8) 40%,   /* Strong Red-Orange */
+    rgba(255, 99, 71, 0.9) 70%,  /* Light Tomato */
+    rgba(255, 165, 0, 0.6) 100%  /* Lighter Orange */
+    );
+    box-shadow: inset -15px -15px 35px rgba(0, 0, 0, 0.5),
+    5px 5px 25px rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orange-overlay {
+    position: absolute;
+    width: 240px; /* Slightly bigger for shadow */
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle at top left,
+    rgba(255, 140, 0, 0.3) 10%,
+    rgba(255, 69, 0, 0.3) 40%,
+    rgba(255, 99, 71, 0.4) 70%,
+    rgba(255, 165, 0, 0.2) 100%
+    );
+    box-shadow: inset -15px -15px 35px rgba(0, 0, 0, 0.3),
+    5px 5px 25px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+
+.circle-outline {
+    position: absolute;
+    width: 240px; /* Reduced slightly */
+    height: 240px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.first-circle {
+    z-index: 3; /* Highest, appears on top */
+}
+
+.second-circle {
+    z-index: 1;
+}
+
+.third-circle {
+    z-index: 2; /* Lowest */
+}
+
+.fourth-circle {
+    z-index: 1; /* Lowest */
+}
+/* Remove borders when navbar is hidden */

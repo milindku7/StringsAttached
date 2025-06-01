@@ -1,0 +1,84 @@
+/* Ensure Full-Page Coverage */
+html, body {
+    overflow: hidden; /* Disables scrolling */
+    height: 100vh; /* Ensures full-page coverage */
+    margin: 0;
+    padding: 0;
+}
+
+/* Account Page Container */
+.account-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f2e6;
+    font-Family: 'JetBrains Mono'; /* Same Font as Login */
+}
+
+/* Title */
+.account-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: black; /* Ensuring the title is black */
+    margin-bottom: 20px;
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 600px;
+}
+
+/* Image Box */
+.image-box {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #eaeaea;
+    border: 2px dashed #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    color: black; /* Ensuring text inside box is black */
+    font-size: 18px; /* Consistent with login form */
+}
+
+/* Image Inside the Box */
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Upload Text */
+.upload-text {
+    color: black !important; /* Ensuring text inside upload boxes is black */
+    font-weight: bold;
+    font-size: 18px; /* Matching login form input text */
+}
+
+/* Account Activity Button */
+.activity-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: gray;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; /* Matching login button font size */
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    font-Family: 'JetBrains Mono';
+}
+
+.activity-button:hover {
+    background-color: darkgray;
+}

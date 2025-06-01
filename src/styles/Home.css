@@ -1,0 +1,155 @@
+/* Add these new button styles to your existing CSS */
+
+.like-button {
+  width: 120px;
+  height: 45px;
+  background-color: #4285F4; /* Google blue */
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 10px 5px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono';
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.like-button:hover {
+  background-color: #3367D6; /* Darker blue */
+  transform: translateY(-2px);
+}
+
+.like-button:active {
+  transform: translateY(0);
+}
+
+.reject-button {
+  width: 120px;
+  height: 45px;
+  background-color: #9a001a; /* Google red */
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 10px 5px;
+  cursor: pointer;
+  font-family: 'JetBrains Mono';
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.reject-button:hover {
+  background-color: #D33426; /* Darker red */
+  transform: translateY(-2px);
+}
+
+.reject-button:active {
+  transform: translateY(0);
+}
+
+/* Container for the action buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Disabled state for both buttons */
+.like-button:disabled,
+.reject-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-y: auto;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.Text {
+  flex-grow: 1;
+  padding-bottom: 120px; /* enough breathing room to scroll to buttons */
+  display: flex;
+  flex-direction: column;
+  background-color: transparent !important;
+
+}
+
+
+.my-profile-card {
+  background-color: white;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.my-profile-hover {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+
+.profile-card {
+  position: relative;
+  overflow: visible;
+}
+
+
+.hover-trigger {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-trigger img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hover-trigger:hover img {
+  transform: scale(1.05);
+}
+
+.hover-card {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  padding: 12px;
+  border-radius: 12px;
+  width: 330px;
+  max-height: 320px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1001;
+  word-break: break-word;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.hover-trigger:hover .hover-card {
+  display: block;
+}

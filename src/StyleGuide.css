@@ -1,0 +1,218 @@
+/* === Color variables === */
+:root {
+    --bg-start:    #faf3f0;
+    --bg-end:      #f2e6fb;
+    --text-col:    #000000;
+    --border-col:  #000000;
+    --input-bg:    #d1d1d1;
+    --code-bg:     #ffffff;
+    --button-bg:   #FF7F50;
+    --error-col:   #ff0000;
+    --success-col: #42c640;
+}
+
+/* === Global reset === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Screen‐reader only helper === */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* === Wrapper: gradient bg & scroll under navbar === */
+.styleguide-container {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, var(--bg-start), var(--bg-end));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* === Inner content === */
+.styleguide-inner {
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    color: var(--text-col);
+}
+
+/* === Typography & spacing === */
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    word-break: break-word;
+}
+
+.subtext {
+    font-size: 18px;
+    text-align: left;
+    margin: 1.5rem 0;
+    word-break: break-word;
+}
+
+.description {
+    font-size: 18px;
+    text-align: center;
+    margin: 1rem 0;
+    word-break: break-word;
+}
+
+.section-title {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-top: 3rem;
+}
+
+/* === Inputs & buttons === */
+.grey-input {
+    width: 100%;
+    max-width: 220px;
+    height: 32px;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 10px;
+    padding: 0 8px;
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+.grey-input::placeholder {
+    color: #7a7a7a;
+    font-style: italic;
+}
+
+.login-button {
+    width: 100%;
+    max-width: 240px;
+    height: 42px;
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-col);
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+
+/* === Code snippet blocks === */
+.code-snippet {
+    background-color: var(--code-bg);
+    font-size: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    width: 100%;
+    word-break: break-word;
+}
+
+/* === Color palette === */
+.color-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 1rem 0 2rem;
+    width: 100%;
+}
+
+.color-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.color-box {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 1px solid var(--border-col);
+}
+
+.color-item p {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-col);
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* === Inline error & success messages === */
+.input-error {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.input-error.success {
+    color: var(--success-col);
+}
+
+.input-error.error {
+    color: var(--error-col);
+}
+
+/* === Tablet (≤768px) === */
+@media (max-width: 768px) {
+    .styleguide-container {
+        margin-top: 56px;
+        height: calc(100vh - 56px);
+        padding: 1.5rem;
+    }
+    .title        { font-size: 32px; }
+    .subtext      { font-size: 16px; }
+    .description  { font-size: 16px; }
+    .grey-input   { max-width: 180px; height: 30px; font-size: 14px; }
+    .login-button { max-width: 200px; height: 40px; font-size: 14px; }
+    .code-snippet { font-size: 14px; }
+    .section-title{ font-size: 22px; }
+    .color-box    { width: 24px; height: 24px; }
+    .color-item p { font-size: 16px; }
+    .input-error  { font-size: 12px; }
+}
+
+/* === Phone (≤480px) === */
+@media (max-width: 480px) {
+    .styleguide-container {
+        margin-top: 52px;
+        height: calc(100vh - 52px);
+        padding: 1rem;
+    }
+    .title         { font-size: 28px; margin: 1.5rem 0 1rem; }
+    .subtext       { font-size: 14px; margin: 1rem 0; }
+    .description   { font-size: 14px; }
+    .section-title { font-size: 20px; margin-top: 2rem; }
+    .grey-input    { max-width: 140px; height: 28px; font-size: 12px; }
+    .login-button  { max-width: 160px; height: 36px; font-size: 14px; }
+    .code-snippet  { font-size: 12px; padding: 0.75rem; }
+    .color-box     { width: 20px; height: 20px; margin-right: 8px; }
+    .color-item p  { font-size: 14px; }
+    .input-error   { font-size: 12px; }
+}

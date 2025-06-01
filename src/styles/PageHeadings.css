@@ -1,0 +1,24 @@
+/* src/styles/PageHeadings.css */
+
+.page-heading {
+    /* Base font & color */
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.8rem;            /* ~28.8px — big enough for accessibility */
+    font-weight: 700;
+    color: #1e1e1e;               /* near-black for excellent contrast */
+
+    /* Spacing to clear the fixed header */
+    margin-top: 1px;             /* push down below 60px navbar + 20px breathing room */
+    margin-bottom: 1.5rem;
+
+    /* Center it */
+    text-align: center;
+}
+
+/* Tweak on smaller screens */
+@media (max-width: 768px) {
+    .page-heading {
+        font-size: 1.6rem;          /* slightly smaller on mobile */
+        margin-top: 70px;           /* reduce top gap a bit */
+    }
+}

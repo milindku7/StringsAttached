@@ -1,0 +1,350 @@
+/* Overall container for the Conversations page */
+/* Main container: take full viewport height & hide overflow */
+html, body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Overall container for the Conversations page */
+/* Main container: take full viewport height & hide overflow */
+.conversations-container {
+    width: 100%;
+    margin-top: 3%;
+    height: 100%;            /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    padding: 20px;            /* Adjust padding as needed */
+    box-sizing: border-box;
+    overflow: hidden;         /* Prevent overall scrolling */
+}
+
+.error-message {
+    color: #FFA500;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.bubble-buttons {
+    min-width: 100px;
+  padding: 2%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem; /* Increased font size for better readability */
+  line-height: 1.5;  /* Improved line height for text clarity */
+  background-color: white; /* Default background color */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 2rem; /* Rounded corners, more modern look */
+  transition: border-color 0.15s ease-in-out, shadow-sm 0.15s ease-in-out; /* Smooth transition */
+  box-sizing: border-box; /* Ensure padding doesn't increase size */
+  font-family: 'Inter', sans-serif;  /* Use Inter font */
+}
+
+.create-a-group {
+    min-width: 100px;
+    max-width: 20%;
+  padding: 2%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem; /* Increased font size for better readability */
+  line-height: 1.5;  /* Improved line height for text clarity */
+  background-color: white; /* Default background color */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 2rem; /* Rounded corners, more modern look */
+  transition: border-color 0.15s ease-in-out, shadow-sm 0.15s ease-in-out; /* Smooth transition */
+  box-sizing: border-box; /* Ensure padding doesn't increase size */
+  font-family: 'Inter', sans-serif;  /* Use Inter font */
+  align-self: center;
+}
+
+.create-a-group-box {
+   width: 100%;
+  padding: 2%;
+  justify-self: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem; /* Increased font size for better readability */
+  line-height: 1.5;  /* Improved line height for text clarity */
+}
+
+.create-a-group:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.bubble-buttons:active {
+    background-color: #000;
+    color: #fff;
+}
+
+.file-upload-group {
+    margin-top: 3%;
+    padding: 1%;
+  margin-bottom: 2%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  font-size: 1rem; /* Increased font size for better readability */
+  color: #333;
+  width: 23.5%; /* Adjust width as needed */
+}
+
+.submit-button {
+    width: 260px;
+    height: 45px;
+    background-color: #008080;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    cursor: pointer;
+    font-Family: 'JetBrains Mono';
+}
+
+/* Users List (remains scrollable) */
+.users-list {
+    width: 60%;
+    padding: 5px;
+    padding-bottom: 10%;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 5px;                /* Further reduced margin */
+    max-height: calc(100vh - 200px);     /* Lower max-height to make it visibly smaller */
+    overflow-y:scroll;
+    transition: box-shadow 0.3s ease;
+}
+
+.select-chat {
+    background-color: "#000000";
+}
+
+.users-list:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.users-list h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.users-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Individual User Item with added border and overflow visible */
+.user-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    border: 1px solid #ddd;
+    overflow: visible; /* Allow tooltip to be visible outside */
+}
+
+.search-input {
+  width: 50%; /* Make it fill its container */
+  padding: 2%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem; /* Increased font size for better readability */
+  line-height: 1.5;  /* Improved line height for text clarity */
+  background-color: white; /* Default background color */
+  border: 1px solid #ccc; /* Subtle border */
+  border-radius: 2rem; /* Rounded corners, more modern look */
+  transition: border-color 0.15s ease-in-out, shadow-sm 0.15s ease-in-out; /* Smooth transition */
+  box-sizing: border-box; /* Ensure padding doesn't increase size */
+  font-family: 'Inter', sans-serif;  /* Use Inter font */
+}
+
+.user-item:hover {
+    background-color: #e9ecef;
+    border-color: #ccc;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-name {
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Updated Tooltip: Position above the user item */
+.email-tooltip {
+    position: absolute;
+    bottom: 100%; /* Position above the user item */
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px); /* Adjust upward offset as needed */
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.user-item:hover .email-tooltip {
+    opacity: 1;
+}
+
+/* Messaging Modal Overlay */
+.messaging-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content Container: transparent so only the chat box is white */
+.messaging-modal-content {
+    background: transparent;
+    width: 95%;
+    max-width: 600px;
+    max-height: 90vh;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Close Button for Modal */
+.close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal-btn:hover {
+    color: #000;
+}
+
+.group-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: width 0.3s ease;
+    position: relative;
+    border: 1px solid #ddd;
+    overflow: visible; /* Allow tooltip to be visible outside */
+}
+
+.group-item.open {
+    width: 250px;
+ }
+
+.group-item:hover {
+    background-color: #e9ecef;
+    border-color: #ccc;
+}
+
+.group-item:hover .email-tooltip {
+    opacity: 1;
+}
+
+.post-contain-all {
+    width: 100%;
+    transition: height ease 0.3s;
+    animation: fadeInSlideDown 0.5s ease forwards;
+    padding: 1%;
+}
+
+.posts-container-big {
+    width: 100%;
+    border-radius: 10px;
+    padding-bottom: 2%;
+    border: #000;
+    border-width: 3px;
+    color: #000;
+    font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.posts-container-big:hover {
+    background-color: #e9ecef;
+}
+
+/* ---------------------------------
+   Mobile Responsiveness
+------------------------------------*/
+@media (max-width: 768px) {
+    .conversations-container {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .users-list {
+        padding: 15px;
+        margin-bottom: 15px;
+        max-height: calc(100vh - 140px);
+    }
+
+    .users-list h2 {
+        font-size: 1.25rem;
+    }
+
+    .user-item {
+        padding: 8px;
+    }
+
+    .group-item {
+        padding: 8px;
+    }
+
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .user-name {
+        font-size: 0.95rem;
+    }
+}
