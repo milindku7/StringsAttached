@@ -46,7 +46,7 @@ const Navbar = () => {
     if (!searchQuery.trim()) return;
     try {
       const resp = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/users?email=${encodeURIComponent(
+        `https://stringsattached.online/hci/api/api/claem/users?email=${encodeURIComponent(
           searchQuery
         )}`
       );

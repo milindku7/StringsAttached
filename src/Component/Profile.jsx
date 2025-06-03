@@ -75,7 +75,7 @@ const Profile = () => {
     })
         .then((res) => res.json())
         .then((result) => {
-          let pictureURL = "https://webdev.cse.buffalo.edu" + result.path;
+          let pictureURL = "https://stringsattached.online" + result.path;
           setProfilePicture(pictureURL); // Update context
           sessionStorage.setItem("profilePicture", pictureURL); // Store in sessionStorage
         })

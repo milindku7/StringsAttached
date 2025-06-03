@@ -24,7 +24,7 @@ const Requests = () => {
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     const userId = sessionStorage.getItem("user");
-    fetch(`https://webdev.cse.buffalo.edu/hci/api/api/claem/connections?toUserID=${userId}`, {
+    fetch(`https://stringsattached.online/hci/api/api/claem/connections?toUserID=${userId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const Requests = () => {
 
   const acceptConnection = async (id) => {
     const token = sessionStorage.getItem("token");
-    await fetch(`https://webdev.cse.buffalo.edu/hci/api/api/claem/connections/${id}`, {
+    await fetch(`https://stringsattached.online/hci/api/api/claem/connections/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const Requests = () => {
 
   const rejectConnection = async (id) => {
     const token = sessionStorage.getItem("token");
-    await fetch(`https://webdev.cse.buffalo.edu/hci/api/api/claem/connections/${id}`, {
+    await fetch(`https://stringsattached.online/hci/api/api/claem/connections/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

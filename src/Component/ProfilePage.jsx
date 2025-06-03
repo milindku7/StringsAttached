@@ -32,7 +32,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/file-uploads?uploaderID=${userID}&take=1`,
+        `https://stringsattached.online/hci/api/api/claem/file-uploads?uploaderID=${userID}&take=1`,
         {
           method: "GET",
           headers: {
@@ -90,7 +90,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+        `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -122,7 +122,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/file-uploads/${fileID}`,
+        `https://stringsattached.online/hci/api/api/claem/file-uploads/${fileID}`,
         {
           method: "GET",
           headers: {
@@ -140,7 +140,7 @@ const ProfilePage = () => {
 
       let imageUrl = data.path;
       if (!imageUrl.startsWith("http")) {
-        imageUrl = `https://webdev.cse.buffalo.edu${imageUrl}?t=${new Date().getTime()}`;
+        imageUrl = `https://stringsattached.online${imageUrl}?t=${new Date().getTime()}`;
       }
 
       setProfilePicUrl(imageUrl);
@@ -174,7 +174,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        "https://webdev.cse.buffalo.edu/hci/api/api/claem/file-uploads",
+        "https://stringsattached.online/hci/api/api/claem/file-uploads",
         {
           method: "POST",
           headers: {
@@ -207,7 +207,7 @@ const ProfilePage = () => {
   
     try {
       const response = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`, 
+        `https://stringsattached.online/hci/api/api/claem/users/${userID}`, 
         {
           method: "PATCH",
           headers: {
@@ -241,7 +241,7 @@ const ProfilePage = () => {
   
     try {
       const response = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+        `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -274,7 +274,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+        `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
         {
           method: "PATCH",
           headers: {

@@ -120,7 +120,7 @@ const UserProfilePage = () => {
       
         try {
           const res = await fetch(
-            `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+            `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -135,7 +135,7 @@ const UserProfilePage = () => {
             ratingsArray.map(async (r) => {
               if (!r.reactorID) return { ...r, name: "Anonymous" };
               const reactorRes = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${r.reactorID}`,
+                `https://stringsattached.online/hci/api/api/claem/users/${r.reactorID}`,
                 {
                   headers: { Authorization: `Bearer ${token}` },
                 }
@@ -172,7 +172,7 @@ const UserProfilePage = () => {
       
         try {
           const res = await fetch(
-            `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+            `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
             {
               method: "GET",
               headers: {
@@ -197,7 +197,7 @@ const UserProfilePage = () => {
           };
       
           const updateResponse = await fetch(
-            `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+            `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
             {
               method: "PATCH",
               headers: {
@@ -366,7 +366,7 @@ const UserProfilePage = () => {
   }
   if (conexist === false) {
     const response2 = await fetch(
-      `https://webdev.cse.buffalo.edu/hci/api/api/claem/connections`,
+      `https://stringsattached.online/hci/api/api/claem/connections`,
       {
           method: "POST",
           headers: {
@@ -445,7 +445,7 @@ let buttonStyle;
         if (!token || !currentUserId || !userID) return;
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/connections?fromUserID=${currentUserId}&toUserID=${userID}`,
+                `https://stringsattached.online/hci/api/api/claem/connections?fromUserID=${currentUserId}&toUserID=${userID}`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
@@ -492,7 +492,7 @@ let buttonStyle;
 
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+                `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`,
@@ -524,7 +524,7 @@ let buttonStyle;
         const token = sessionStorage.getItem("token");
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+                `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -556,7 +556,7 @@ let buttonStyle;
 
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/post-reactions?postID=${postId}`,
+                `https://stringsattached.online/hci/api/api/claem/post-reactions?postID=${postId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -600,7 +600,7 @@ let buttonStyle;
 
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/posts?authorID=${userID}`,
+                `https://stringsattached.online/hci/api/api/claem/posts?authorID=${userID}`,
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`,
@@ -652,7 +652,7 @@ let buttonStyle;
     
         try {
             const res = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/connections?fromUserID=${currentUserId}&toUserID=${userID}`,
+                `https://stringsattached.online/hci/api/api/claem/connections?fromUserID=${currentUserId}&toUserID=${userID}`,
                 {
                     headers: { Authorization: `Bearer ${token}` },
                 }
@@ -675,7 +675,7 @@ let buttonStyle;
                 // PATCH connection
                 console.log("PATCHing connection", existingConnection.id, newAttributes);
                 const patchResponse = await fetch(
-                    `https://webdev.cse.buffalo.edu/hci/api/api/claem/connections/${existingConnection.id}`,
+                    `https://stringsattached.online/hci/api/api/claem/connections/${existingConnection.id}`,
                     {
                         method: "PATCH",
                         headers: {
@@ -698,7 +698,7 @@ let buttonStyle;
                 // POST connection
                 console.log("POSTing new connection with", newAttributes);
                 const createResponse = await fetch(
-                    `https://webdev.cse.buffalo.edu/hci/api/api/claem/connections`,
+                    `https://stringsattached.online/hci/api/api/claem/connections`,
                     {
                         method: "POST",
                         headers: {
@@ -743,7 +743,7 @@ let buttonStyle;
 
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/posts?parentPostID=${postId}`,
+                `https://stringsattached.online/hci/api/api/claem/posts?parentPostID=${postId}`,
                 {
                     headers: {
                         "Authorization": `Bearer ${token}`,
@@ -800,7 +800,7 @@ let buttonStyle;
             };
 
             const response = await fetch(
-                "https://webdev.cse.buffalo.edu/hci/api/api/claem/posts",
+                "https://stringsattached.online/hci/api/api/claem/posts",
                 {
                     method: "POST",
                     headers: {
@@ -841,7 +841,7 @@ let buttonStyle;
 
         try {
             const existingResponse = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/post-reactions?postID=${postId}&reactorID=${currentUserId}`,
+                `https://stringsattached.online/hci/api/api/claem/post-reactions?postID=${postId}&reactorID=${currentUserId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -857,7 +857,7 @@ let buttonStyle;
 
             if (existingReaction?.name === reactionType) {
                 await fetch(
-                    `https://webdev.cse.buffalo.edu/hci/api/api/claem/post-reactions/${existingReaction.id}`,
+                    `https://stringsattached.online/hci/api/api/claem/post-reactions/${existingReaction.id}`,
                     {
                         method: "DELETE",
                         headers: {
@@ -876,7 +876,7 @@ let buttonStyle;
             }
             else if (existingReaction) {
                 await fetch(
-                    `https://webdev.cse.buffalo.edu/hci/api/api/claem/post-reactions/${existingReaction.id}`,
+                    `https://stringsattached.online/hci/api/api/claem/post-reactions/${existingReaction.id}`,
                     {
                         method: "PATCH",
                         headers: {
@@ -902,7 +902,7 @@ let buttonStyle;
             }
             else {
                 await fetch(
-                    `https://webdev.cse.buffalo.edu/hci/api/api/claem/post-reactions`,
+                    `https://stringsattached.online/hci/api/api/claem/post-reactions`,
                     {
                         method: "POST",
                         headers: {
@@ -960,7 +960,7 @@ let buttonStyle;
 
         try {
             const response = await fetch(
-                `https://webdev.cse.buffalo.edu/hci/api/api/claem/users/${userID}`,
+                `https://stringsattached.online/hci/api/api/claem/users/${userID}`,
                 {
                     method: "GET",
                     headers: {
@@ -998,7 +998,7 @@ let buttonStyle;
 
             <div style={{ textAlign: "center", marginBottom: "20px" }}>
                 <img
-                    src={`https://webdev.cse.buffalo.edu/${profilePicUrl}`}
+                    src={`https://stringsattached.online/${profilePicUrl}`}
                     alt="Profile"
                     style={{
                         width: "100px",
