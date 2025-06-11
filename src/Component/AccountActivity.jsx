@@ -65,7 +65,7 @@ function AccountActivity() {
     try {
       // First get current user attributes
       const userResponse = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://stringsattached.online/hci/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -87,7 +87,7 @@ function AccountActivity() {
       };
 
       const response = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://stringsattached.online/hci/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -119,7 +119,7 @@ function AccountActivity() {
 
       try {
         const response = await fetch(
-          `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+          `https://stringsattached.online/hci/api/default/users/${userID}`,
           {
             method: "GET",
             headers: {
@@ -158,7 +158,7 @@ function AccountActivity() {
     try {
       // Fetch current user attributes
       const userResponse = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://stringsattached.online/hci/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -173,7 +173,7 @@ function AccountActivity() {
   
       // Clear the SongOfTheWeek field
       const response = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://stringsattached.online/hci/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -241,7 +241,7 @@ function AccountActivity() {
     try {
       // Get current user attributes
       const userResponse = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://stringsattached.online/hci/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -255,7 +255,7 @@ function AccountActivity() {
   
       // Update SongOfTheWeek attribute
       const patchResponse = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://stringsattached.online/hci/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -313,7 +313,7 @@ function AccountActivity() {
 
       try {
         const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "GET",
               headers: {
@@ -374,7 +374,7 @@ function AccountActivity() {
 
     try {
       const userResponse = await fetch(
-          `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+          `https://stringsattached.online/hci/api/default/users/${userID}`,
           {
             method: "GET",
             headers: {
@@ -399,7 +399,7 @@ function AccountActivity() {
       for (let i = 0; i < selectedInstruments.length; i++) {
         let inst = selectedInstruments[i]
         const response0 = await fetch(
-          `https://stringsattached.online/hci/api/api/default/groups?name=${inst}`,
+          `https://stringsattached.online/hci/api/default/groups?name=${inst}`,
           {
             method: "GET",
             headers: {
@@ -417,7 +417,7 @@ function AccountActivity() {
       const groupexists = userData[1];
       if (groupexists === 0) {
         const response2 = await fetch(
-          `https://stringsattached.online/hci/api/api/default/groups`,
+          `https://stringsattached.online/hci/api/default/groups`,
           {
             method: "POST",
             headers: {
@@ -438,7 +438,7 @@ function AccountActivity() {
       console.log(groupid);
 
       const response3 = await fetch(
-        `https://stringsattached.online/hci/api/api/default/group-members`,
+        `https://stringsattached.online/hci/api/default/group-members`,
         {
           method: "POST",
           headers: {
@@ -463,7 +463,7 @@ function AccountActivity() {
       const GID = userData[0][0].id;
       console.log("GID",GID)
       const response5 = await fetch(
-        `https://stringsattached.online/hci/api/api/default/group-members?userID=${userID}&groupID=${GID}`,
+        `https://stringsattached.online/hci/api/default/group-members?userID=${userID}&groupID=${GID}`,
         {
           method: "GET",
           headers: {
@@ -482,7 +482,7 @@ function AccountActivity() {
 
     if (areTheyintoG === 0) {
       const response4 = await fetch(
-        `https://stringsattached.online/hci/api/api/default/group-members`,
+        `https://stringsattached.online/hci/api/default/group-members`,
         {
           method: "POST",
           headers: {
@@ -505,7 +505,7 @@ function AccountActivity() {
       }
 
       const response = await fetch(
-          `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+          `https://stringsattached.online/hci/api/default/users/${userID}`,
           {
             method: "PATCH",
             headers: {

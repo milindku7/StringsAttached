@@ -64,7 +64,7 @@ const Conversations = () => {
         const fetchblockedposts = async () => {
             const userid = sessionStorage.getItem("user");
             const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userid}`,
+            `https://stringsattached.online/hci/api/default/users/${userid}`,
             {
                 headers: {
                     Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -84,7 +84,7 @@ const Conversations = () => {
         const userID = sessionStorage.getItem("user");
         const token = sessionStorage.getItem("token")
         fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "GET",
               headers: {
@@ -118,7 +118,7 @@ const Conversations = () => {
         setError("");
         try {
             const response = await fetch(
-                "https://stringsattached.online/hci/api/api/default/users",
+                "https://stringsattached.online/hci/api/default/users",
                 {
                     headers: {
                         Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -155,7 +155,7 @@ const Conversations = () => {
     const fetchConnections = useCallback(async () => {
         try {
             const response = await fetch(
-                `https://stringsattached.online/hci/api/api/default/connections?fromUserID=${loggedInUserId}`,
+                `https://stringsattached.online/hci/api/default/connections?fromUserID=${loggedInUserId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -248,7 +248,7 @@ const Conversations = () => {
         const userID = sessionStorage.getItem("user");
         
         const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/group-members?userID=${userID}`,
+            `https://stringsattached.online/hci/api/default/group-members?userID=${userID}`,
             {
               method: "GET",
               headers: {
@@ -280,7 +280,7 @@ const Conversations = () => {
         else {
             setgroupselected(group);
             const response = await fetch(
-                `https://stringsattached.online/hci/api/api/default/group-members?groupID=${group.id}`,
+                `https://stringsattached.online/hci/api/default/group-members?groupID=${group.id}`,
                 {
                   method: "GET",
                   headers: {
@@ -302,7 +302,7 @@ const Conversations = () => {
 
               for (let j = 0; j < mem_list.length; j++) {
                 const response = await fetch(
-                    `https://stringsattached.online/hci/api/api/default/posts?authorID=${mem_list[j]}&sort=newest`,
+                    `https://stringsattached.online/hci/api/default/posts?authorID=${mem_list[j]}&sort=newest`,
                     {
                       method: "GET",
                       headers: {
@@ -348,7 +348,7 @@ const Conversations = () => {
         const token = sessionStorage.getItem("token");
 
         const response3 = await fetch(
-            `https://stringsattached.online/hci/api/api/default/groups?name=${id}`,
+            `https://stringsattached.online/hci/api/default/groups?name=${id}`,
             {
               method: "GET",
               headers: {
@@ -362,7 +362,7 @@ const Conversations = () => {
         const actualgid = returnedg[0][0].id;
 
         const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/group-members?groupID=${actualgid}`,
+            `https://stringsattached.online/hci/api/default/group-members?groupID=${actualgid}`,
             {
               method: "GET",
               headers: {
@@ -387,7 +387,7 @@ const Conversations = () => {
 
           for (let j = 0; j < mem_list.length; j++) {
             const response = await fetch(
-                `https://stringsattached.online/hci/api/api/default/posts?authorID=${mem_list[j]}&sort=newest`,
+                `https://stringsattached.online/hci/api/default/posts?authorID=${mem_list[j]}&sort=newest`,
                 {
                   method: "GET",
                   headers: {
@@ -532,7 +532,7 @@ const Conversations = () => {
             errorShow(4, "");
         const searchQuery = newmember.trim();
         const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users?email=${encodeURIComponent(searchQuery)}`,
+            `https://stringsattached.online/hci/api/default/users?email=${encodeURIComponent(searchQuery)}`,
             {
               method: "GET",
               headers: {
@@ -603,7 +603,7 @@ const Conversations = () => {
             formData.append("file", uploadfile);
             const token = sessionStorage.getItem("token");
             const uploadResponse = await fetch(
-                `https://stringsattached.online/hci/api/api/default/file-uploads`,
+                `https://stringsattached.online/hci/api/default/file-uploads`,
                 {
                   method: "POST",
                   headers: {
@@ -617,7 +617,7 @@ const Conversations = () => {
               console.log("upload data",uploadData?.path)
               const path = uploadData.path;
               const response2 = await fetch(
-                `https://stringsattached.online/hci/api/api/default/groups`,
+                `https://stringsattached.online/hci/api/default/groups`,
                 {
                   method: "POST",
                   headers: {
@@ -641,7 +641,7 @@ const Conversations = () => {
             console.log(groupid);
 
             const response3 = await fetch(
-                `https://stringsattached.online/hci/api/api/default/group-members`,
+                `https://stringsattached.online/hci/api/default/group-members`,
                 {
                   method: "POST",
                   headers: {
@@ -658,7 +658,7 @@ const Conversations = () => {
 
             for (let i = 0; i < groupmemberstoadd.length; i++) {
                 const response4 = await fetch(
-                    `https://stringsattached.online/hci/api/api/default/group-members`,
+                    `https://stringsattached.online/hci/api/default/group-members`,
                     {
                       method: "POST",
                       headers: {
@@ -682,7 +682,7 @@ const Conversations = () => {
         const token = sessionStorage.getItem("token");
 
         const userResponse = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "GET",
               headers: {
@@ -725,7 +725,7 @@ const Conversations = () => {
 
 
           const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "PATCH",
               headers: {
@@ -743,7 +743,7 @@ const Conversations = () => {
         const token = sessionStorage.getItem("token");
 
         const userResponse = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "GET",
               headers: {
@@ -776,7 +776,7 @@ const Conversations = () => {
           let currgrp = grouposts;
           console.log(id)
           const postresponse = await fetch (
-            `https://stringsattached.online/hci/api/api/default/posts/${id}`,
+            `https://stringsattached.online/hci/api/default/posts/${id}`,
             {
                 method: "GET",
               headers: {
@@ -799,7 +799,7 @@ const Conversations = () => {
           setblockedposts(newblocked);
     
           const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "PATCH",
               headers: {
@@ -817,7 +817,7 @@ const Conversations = () => {
         const token = sessionStorage.getItem("token");
 
         const userResponse = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "GET",
               headers: {
@@ -850,7 +850,7 @@ const Conversations = () => {
           let currgrp = grouposts;
           console.log(id)
           const postresponse = await fetch (
-            `https://stringsattached.online/hci/api/api/default/posts/${id}`,
+            `https://stringsattached.online/hci/api/default/posts/${id}`,
             {
                 method: "GET",
               headers: {
@@ -878,7 +878,7 @@ const Conversations = () => {
           setblockedposts(newblocked);
     
           const response = await fetch(
-            `https://stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://stringsattached.online/hci/api/default/users/${userID}`,
             {
               method: "PATCH",
               headers: {

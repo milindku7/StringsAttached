@@ -46,7 +46,7 @@ const Navbar = () => {
     if (!searchQuery.trim()) return;
     try {
       const resp = await fetch(
-        `https://stringsattached.online/hci/api/api/default/users?email=${encodeURIComponent(
+        `https://stringsattached.online/hci/api/default/users?email=${encodeURIComponent(
           searchQuery
         )}`
       );
