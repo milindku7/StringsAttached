@@ -66,7 +66,7 @@ const Account = () => {
         })
             .then((res) => res.json())
             .then((result) => {
-                let imageUrl = "https://stringsattached.online" + result.path;
+                let imageUrl = "https://www.stringsattached.online" + result.path;
 
                 if (index === -1) {
                     // Update the profile picture in the context

@@ -32,7 +32,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://stringsattached.online/hci/api/default/file-uploads?uploaderID=${userID}&take=1`,
+        `https://www.stringsattached.online/hci/api/api/default/file-uploads?uploaderID=${userID}&take=1`,
         {
           method: "GET",
           headers: {
@@ -90,7 +90,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://stringsattached.online/hci/api/default/users/${userID}`,
+        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -122,7 +122,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://stringsattached.online/hci/api/default/file-uploads/${fileID}`,
+        `https://www.stringsattached.online/hci/api/api/default/file-uploads/${fileID}`,
         {
           method: "GET",
           headers: {
@@ -140,7 +140,7 @@ const ProfilePage = () => {
 
       let imageUrl = data.path;
       if (!imageUrl.startsWith("http")) {
-        imageUrl = `https://stringsattached.online${imageUrl}?t=${new Date().getTime()}`;
+        imageUrl = `https://www.stringsattached.online${imageUrl}?t=${new Date().getTime()}`;
       }
 
       setProfilePicUrl(imageUrl);
@@ -174,7 +174,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        "https://stringsattached.online/hci/api/default/file-uploads",
+        "https://www.stringsattached.online/hci/api/api/default/file-uploads",
         {
           method: "POST",
           headers: {
@@ -207,7 +207,7 @@ const ProfilePage = () => {
   
     try {
       const response = await fetch(
-        `https://stringsattached.online/hci/api/default/users/${userID}`, 
+        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`, 
         {
           method: "PATCH",
           headers: {
@@ -241,7 +241,7 @@ const ProfilePage = () => {
   
     try {
       const response = await fetch(
-        `https://stringsattached.online/hci/api/default/users/${userID}`,
+        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -274,7 +274,7 @@ const ProfilePage = () => {
 
     try {
       const response = await fetch(
-        `https://stringsattached.online/hci/api/default/users/${userID}`,
+        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {

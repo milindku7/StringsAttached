@@ -24,7 +24,7 @@ const Requests = () => {
   useEffect(() => {
     const token = sessionStorage.getItem("token");
     const userId = sessionStorage.getItem("user");
-    fetch(`https://stringsattached.online/hci/api/default/connections?toUserID=${userId}`, {
+    fetch(`https://www.stringsattached.online/hci/api/api/default/connections?toUserID=${userId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,7 @@ const Requests = () => {
 
   const acceptConnection = async (id) => {
     const token = sessionStorage.getItem("token");
-    await fetch(`https://stringsattached.online/hci/api/default/connections/${id}`, {
+    await fetch(`https://www.stringsattached.online/hci/api/api/default/connections/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -60,7 +60,7 @@ const Requests = () => {
 
   const rejectConnection = async (id) => {
     const token = sessionStorage.getItem("token");
-    await fetch(`https://stringsattached.online/hci/api/default/connections/${id}`, {
+    await fetch(`https://www.stringsattached.online/hci/api/api/default/connections/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
