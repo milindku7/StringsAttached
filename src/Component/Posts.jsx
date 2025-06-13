@@ -44,7 +44,7 @@ const Posts = ({ doRefreshPosts, appRefresh }) => {
 
   return (
     <div>
-      <p>CSE 370 Social Media Test Harness</p>
+      <p>Strings Attached</p>
       <PostForm refresh={appRefresh} loadPosts={loadPosts} />
       <PostingList
         refresh={appRefresh}
