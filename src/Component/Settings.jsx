@@ -45,7 +45,7 @@ const Settings = () => {
   
     try {
       const fetchResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/file-uploads?uploaderID=${userID}`,
+        `https://www.stringsattached.online/api/api/default/file-uploads?uploaderID=${userID}`,
         {
           method: "GET",
           headers: {
@@ -68,7 +68,7 @@ const Settings = () => {
       const secondLatestImage = sortedImages[1];
   
       const deleteResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/file-uploads/${latestImage.id}`,
+        `https://www.stringsattached.online/api/api/default/file-uploads/${latestImage.id}`,
         {
           method: "DELETE",
           headers: {
@@ -132,7 +132,7 @@ const Settings = () => {
   
     try {
       const res = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -146,7 +146,7 @@ const Settings = () => {
         ratingsArray.map(async (r) => {
           if (!r.reactorID) return { ...r, name: "Anonymous" };
           const reactorRes = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/users/${r.reactorID}`,
+            `https://www.stringsattached.online/api/api/default/users/${r.reactorID}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -174,7 +174,7 @@ const Settings = () => {
   
     try {
       const res = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -187,7 +187,7 @@ const Settings = () => {
       const reviewerData = await Promise.all(
         reviews.map(async (review) => {
           const reviewerRes = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/users/${review.reviewerID}`,
+            `https://www.stringsattached.online/api/api/default/users/${review.reviewerID}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -214,7 +214,7 @@ const Settings = () => {
     const userID = sessionStorage.getItem("user");
   
     const res = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+      `https://www.stringsattached.online/api/api/default/users/${userID}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
@@ -243,7 +243,7 @@ const Settings = () => {
     };
   
     const patchRes = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+      `https://www.stringsattached.online/api/api/default/users/${userID}`,
       {
         method: "PATCH",
         headers: {
@@ -273,7 +273,7 @@ const Settings = () => {
   
     try {
       const userResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -292,7 +292,7 @@ const Settings = () => {
       };
   
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -327,7 +327,7 @@ const fetchFollowedUsers = async () => {
 
   try {
     const response = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/connections?fromUserID=${userID}`,
+      `https://www.stringsattached.online/api/api/default/connections?fromUserID=${userID}`,
       {
         method: "GET",
         headers: {
@@ -360,7 +360,7 @@ const fetchFollowedUsers = async () => {
     const pendingFetches = pendings.map(async (conn) => {
       try {
         const res = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/users/${conn.toUserID}`,
+          `https://www.stringsattached.online/api/api/default/users/${conn.toUserID}`,
           {
             method: "GET",
             headers: {
@@ -385,7 +385,7 @@ const fetchFollowedUsers = async () => {
     const userFetches = follows.map(async (conn) => {
       try {
         const userRes = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/users/${conn.toUserID}`,
+          `https://www.stringsattached.online/api/api/default/users/${conn.toUserID}`,
           {
             method: "GET",
             headers: {
@@ -430,7 +430,7 @@ const fetchFollowedUsers = async () => {
   
     try {
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/connections?fromUserID=${userID}`,
+        `https://www.stringsattached.online/api/api/default/connections?fromUserID=${userID}`,
         {
           method: "GET",
           headers: {
@@ -457,7 +457,7 @@ const fetchFollowedUsers = async () => {
       const userFetches = blocked.map(async (conn) => {
         try {
           const userRes = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/users/${conn.toUserID}`,
+            `https://www.stringsattached.online/api/api/default/users/${conn.toUserID}`,
             {
               method: "GET",
               headers: {
@@ -502,7 +502,7 @@ const fetchFollowedUsers = async () => {
     try {
       // Fetch all uploaded images
       const fetchResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/file-uploads?uploaderID=${userID}`,
+        `https://www.stringsattached.online/api/api/default/file-uploads?uploaderID=${userID}`,
         {
           method: "GET",
           headers: {
@@ -527,7 +527,7 @@ const fetchFollowedUsers = async () => {
   
       // Delete the latest image
       const deleteResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/file-uploads/${latestImage.id}`,
+        `https://www.stringsattached.online/api/api/default/file-uploads/${latestImage.id}`,
         {
           method: "DELETE",
           headers: {
@@ -581,7 +581,7 @@ const fetchFollowedUsers = async () => {
   
     try {
       const response = await fetch(
-        "https://www.stringsattached.online/hci/api/api/default/file-uploads",
+        "https://www.stringsattached.online/api/api/default/file-uploads",
         {
           method: "POST",
           headers: {
@@ -610,7 +610,7 @@ const fetchFollowedUsers = async () => {
   
     try {
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/posts?authorID=${userID}`,
+        `https://www.stringsattached.online/api/api/default/posts?authorID=${userID}`,
         {
           method: "GET",
           headers: {
@@ -654,7 +654,7 @@ const deleteAccount = async () => {
 
   try {
       const response = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/users/${storedUserID}?relatedObjectsAction=delete`, 
+          `https://www.stringsattached.online/api/api/default/users/${storedUserID}?relatedObjectsAction=delete`, 
           {
               method: "DELETE",
               headers: {
@@ -695,7 +695,7 @@ const updateProfilePicture = async (imageUrl) => {
   try {
     // Step 1: Fetch current attributes
     const userResponse = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+      `https://www.stringsattached.online/api/api/default/users/${userID}`,
       {
         method: "GET",
         headers: {
@@ -720,7 +720,7 @@ const updateProfilePicture = async (imageUrl) => {
 
     // Step 3: PATCH with full updated attribute set
     const patchResponse = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+      `https://www.stringsattached.online/api/api/default/users/${userID}`,
       {
         method: "PATCH",
         headers: {
@@ -751,7 +751,7 @@ const fetchLatestProfilePicture = useCallback(async () => {
 
     try {
         const response = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/file-uploads?uploaderID=${userID}&take=1`,
+            `https://www.stringsattached.online/api/api/default/file-uploads?uploaderID=${userID}&take=1`,
             {
                 method: "GET",
                 headers: {
@@ -791,7 +791,7 @@ const fetchUserProfile = useCallback(async () => {
 
   try {
       const response = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/users/${storedUserID}`,
+          `https://www.stringsattached.online/api/api/default/users/${storedUserID}`,
           {
               method: "GET",
               headers: {
@@ -862,7 +862,7 @@ if (!postContent.trim()) {
     console.log("📢 Sending Post Data:", postData);
 
     const response = await fetch(
-      "https://www.stringsattached.online/hci/api/api/default/posts",
+      "https://www.stringsattached.online/api/api/default/posts",
       {
         method: "POST",
         headers: {
@@ -923,7 +923,7 @@ const confirmAccountDeletion = async () => {
 
   try {
     const response = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${storedUserID}?relatedObjectsAction=delete`, 
+      `https://www.stringsattached.online/api/api/default/users/${storedUserID}?relatedObjectsAction=delete`, 
       {
         method: "DELETE",
         headers: {
@@ -995,7 +995,7 @@ const retrieveAuthDetails = () => {
 //       }
 //
 //       const deleteResponse = await fetch(
-//         `https://www.stringsattached.online/hci/api/api/default/posts/${post.id}`,
+//         `https://www.stringsattached.online/api/api/default/posts/${post.id}`,
 //         {
 //           method: "DELETE",
 //           headers: {
@@ -1074,7 +1074,7 @@ const handleFileChange = async (e) => {
     formData.append("file", selectedFile);
 
     const response = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/file-uploads`,
+      `https://www.stringsattached.online/api/api/default/file-uploads`,
       {
         method: "POST",
         headers: {
@@ -1111,7 +1111,7 @@ const updateAge = async () => {
   try {
     // Fetch the existing user data to preserve other attributes
     const userResponse = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+      `https://www.stringsattached.online/api/api/default/users/${userID}`,
       {
         method: "GET",
         headers: {
@@ -1135,7 +1135,7 @@ const updateAge = async () => {
 
     // Send the updated attributes to the server
     const response = await fetch(
-      `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+      `https://www.stringsattached.online/api/api/default/users/${userID}`,
       {
         method: "PATCH",
         headers: {
@@ -1171,7 +1171,7 @@ const updateAge = async () => {
   
     try {
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -1202,7 +1202,7 @@ const updateAge = async () => {
   
     try {
       const deleteResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/posts/${postId}`,
+        `https://www.stringsattached.online/api/api/default/posts/${postId}`,
         {
           method: "DELETE",
           headers: {
@@ -1223,7 +1223,7 @@ const updateAge = async () => {
       // If the post had an associated file, delete it
       if (fileId) {
         const fileDeleteResponse = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/file-uploads/${fileId}`,
+          `https://www.stringsattached.online/api/api/default/file-uploads/${fileId}`,
           {
             method: "DELETE",
             headers: {
@@ -1292,7 +1292,7 @@ const updateAge = async () => {
     try {
       // Fetch existing attributes to preserve them
       userResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -1321,7 +1321,7 @@ const updateAge = async () => {
 
     try {
         const response = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+            `https://www.stringsattached.online/api/api/default/users/${userID}`,
             {
                 method: "PATCH",
                 headers: {

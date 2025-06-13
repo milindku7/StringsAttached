@@ -66,7 +66,7 @@ const Profiles = () => {
       uniqueIds.map(async (id) => {
         try {
           const res = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/users/${id}`,
+            `https://www.stringsattached.online/api/api/default/users/${id}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -103,7 +103,7 @@ const Profiles = () => {
       uniqueIds.map(async (id) => {
         try {
           const res = await fetch(
-            `https://www.stringsattached.online/hci/api/api/default/users/${id}`,
+            `https://www.stringsattached.online/api/api/default/users/${id}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -126,7 +126,7 @@ const Profiles = () => {
 
     try {
       const userRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -143,7 +143,7 @@ const Profiles = () => {
       };
 
       const patchRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "PATCH",
           headers: {
@@ -173,7 +173,7 @@ const Profiles = () => {
     try {
       // First get current user attributes
       const userResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           method: "GET",
           headers: {
@@ -193,7 +193,7 @@ const Profiles = () => {
       };
 
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+        `https://www.stringsattached.online/api/api/default/users/${userID}`,
         {
           method: "PATCH",
           headers: {
@@ -222,7 +222,7 @@ const Profiles = () => {
 
       try {
         const response = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/users/${userID}`,
+          `https://www.stringsattached.online/api/api/default/users/${userID}`,
           {
             method: "GET",
             headers: {
@@ -258,7 +258,7 @@ const Profiles = () => {
 
       try {
         const response = await fetch(
-          "https://www.stringsattached.online/hci/api/api/default/users",
+          "https://www.stringsattached.online/api/api/default/users",
           {
             headers: {
               Authorization: `Bearer ${authToken}`,
@@ -294,7 +294,7 @@ const Profiles = () => {
   const fetchConnections = useCallback(async () => {
     try {
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/connections`,
+        `https://www.stringsattached.online/api/api/default/connections`,
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -340,7 +340,7 @@ const Profiles = () => {
 
     try {
       const userRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -357,7 +357,7 @@ const Profiles = () => {
       };
 
       const patchRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "PATCH",
           headers: {
@@ -432,7 +432,7 @@ const Profiles = () => {
 
     try {
       const userRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -449,7 +449,7 @@ const Profiles = () => {
       };
 
       const patchRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "PATCH",
           headers: {
@@ -474,7 +474,7 @@ const Profiles = () => {
     try {
       // Fetch current attributes to preserve them
       const userResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "GET",
           headers: {
@@ -493,7 +493,7 @@ const Profiles = () => {
       };
 
       const patchResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "PATCH",
           headers: {
@@ -519,7 +519,7 @@ const Profiles = () => {
 
     try {
       const patchResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "PATCH",
           headers: {
@@ -544,7 +544,7 @@ const Profiles = () => {
   const fetchCurrentUser = useCallback(async () => {
     try {
       const response = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -610,7 +610,7 @@ const Profiles = () => {
     try {
       // Step 1: Check existing connections
       const connRes = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/connections`,
+        `https://www.stringsattached.online/api/api/default/connections`,
         {
           headers: {
             Authorization: `Bearer ${authToken}`,
@@ -633,7 +633,7 @@ const Profiles = () => {
       if (existingConnection) {
         // Step 2: PATCH the existing connection
         const patchRes = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/connections/${existingConnection.id}`,
+          `https://www.stringsattached.online/api/api/default/connections/${existingConnection.id}`,
           {
             method: "PATCH",
             headers: {
@@ -656,7 +656,7 @@ const Profiles = () => {
       } else {
         // Step 3: POST a new connection
         const postRes = await fetch(
-          `https://www.stringsattached.online/hci/api/api/default/connections`,
+          `https://www.stringsattached.online/api/api/default/connections`,
           {
             method: "POST",
             headers: {
@@ -732,7 +732,7 @@ const Profiles = () => {
       formData.append("attributes", JSON.stringify({}));
 
       const uploadResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/file-uploads`,
+        `https://www.stringsattached.online/api/api/default/file-uploads`,
         {
           method: "POST",
           headers: {
@@ -752,7 +752,7 @@ const Profiles = () => {
 
       // 2. Get current attributes
       const userResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "GET",
           headers: {
@@ -772,7 +772,7 @@ const Profiles = () => {
 
       // 4. Save changes with PATCH
       const patchResponse = await fetch(
-        `https://www.stringsattached.online/hci/api/api/default/users/${currentUserId}`,
+        `https://www.stringsattached.online/api/api/default/users/${currentUserId}`,
         {
           method: "PATCH",
           headers: {
